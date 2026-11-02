@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/gh/methio/adafruitIO-class@latest/index.js"></script>
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="style.css" />
+    
+</head>
+
+<body>
+
+    <div class="dashboard-card">
+    
+        <!-- Pestañas / Botones superiores -->
+        <div class="tabs-container">
+            <button class="tab-btn active">Living Room</button>
+            <button class="tab-btn green">Beedroom</button>
+            <button class="tab-btn green">Kitchen</button>
+            <button class="tab-btn green add-btn">+</button>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="main-content">
+        
+            <!-- Tarjeta Izquierda: Niveles de Sensor y Graduación -->
+            <div class="panel-card blue-card">
+                <div class="panel-row">
+                <h3 class="label-bold">Sensor Light Level</h3>
+                <div class="badge badge-large" id="sensorLightLevel">86%</div>
+                </div>
+                
+                <div class="panel-row">
+                <span class="label-regular">Automatic graduation</span>
+                <!-- Input tipo número editable dinámicamente -->
+                <div class="badge badge-small">
+                    <span id="gradValueDisplay">55</span>%
+                </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Derecha: Control de Interruptor ON/OFF -->
+            <div class="panel-card blue-card switch-panel">
+                <h3 class="panel-title">Automatic Graduation</h3>
+                
+                <div class="switch-container">
+                <span class="switch-label" id="labelOn">ON</span>
+                
+                <label class="toggle-switch">
+                    <input type="checkbox" id="graduationToggle" checked />
+                    <span class="slider"></span>
+                </label>
+                
+                <span class="switch-label" id="labelOff">OFF</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

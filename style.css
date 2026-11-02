@@ -1,0 +1,160 @@
+body {
+    background-color: #F6EFDE;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tabs-container {
+    margin-bottom:20px;
+    display:flex;
+    gap: 20px;
+    width: 100%;
+
+}
+
+.tab-btn {
+    flex: 1;
+    background-color: #C1AF5F;
+    border-radius: 60px;
+    border: none;
+    font-size: 24px;
+    color: #462F17;
+    padding:10px
+}
+
+.panel-card {
+    background-color: #A9C5D6;
+    border-radius: 50px;
+    border: none;
+    font-size: 24px;
+    color: #462F17;
+    padding:20px;
+}
+
+.main-content {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 20px;
+   width: 100%;
+}
+
+.panel-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.panel-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #462F17;
+}
+
+/* Estilo base para la casillita de los números */
+.badge {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #F6EFDE;                
+  background-color: #462F17;     
+  border-radius: 12px;           
+  padding: 6px 16px;            
+  display: inline-block;         
+  text-align: center;
+}
+
+/* Tamaño grande para el 86% */
+.badge-large {
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+/* Tamaño pequeño para el 55% */
+.badge-small {
+  font-size: 24px;
+  margin-left: 30px;
+}
+
+
+
+
+
+
+
+/* //////////////////////   SWICH    ////////////////////////// */
+
+
+
+/* 1. Contenedor del interruptor */
+.switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.switch-label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #462F17;
+}
+
+/* 2. Estructura principal del switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Ocultar el checkbox nativo del navegador */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* 3. El riel o fondo del interruptor (Slider) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;            /* Color apagado (OFF) */
+  transition: 0.4s;
+  border-radius: 34px;               /* Forma ovalada */
+  border: 2px solid #462F17;
+}
+
+/* La bolita blanca deslizante */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 23px;
+  width: 23px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  border: 2px solid #462F17;
+}
+
+/* 4. Estado ENCENDIDO (ON) */
+/* Cuando el checkbox está marcado, cambia el color de fondo */
+input:checked + .slider {
+  background-color: #C1AF5F;         /* Color verde/dorado de tu paleta */
+}
+
+/* Mueve la bolita blanca a la derecha */
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
