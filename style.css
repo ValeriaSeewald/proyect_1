@@ -12,7 +12,6 @@ body {
     display:flex;
     gap: 20px;
     width: 100%;
-
 }
 
 .tab-btn {
@@ -39,6 +38,7 @@ body {
    grid-template-columns: 1fr 1fr;
    gap: 20px;
    width: 100%;
+   margin-bottom: 20px;
 }
 
 .panel-row {
@@ -86,7 +86,6 @@ body {
 
 
 /* //////////////////////   SWICH    ////////////////////////// */
-
 
 
 /* 1. Contenedor del interruptor */
@@ -158,3 +157,10 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
 }
+
+
+
+
+
+
+
